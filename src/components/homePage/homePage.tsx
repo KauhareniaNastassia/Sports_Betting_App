@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import css from './homePage.module.scss'
 import {useAppSelector} from "../../hook/hook";
 import {TableOfEvents} from "../tableOfEvents/tableOfEvents";
@@ -13,7 +13,6 @@ export const HomePage: React.FC = () => {
     const selectedCategory = useAppSelector(state => state.categories.items.find(el => el.name === category))
 
     const eventsInThisCategory = events.filter((event) => event.category === selectedCategory?.name)
-    const specialIcon = useAppSelector(state => state.categories.items.find(el => el.icon === category))
     let eventsInSelectedCategory: EventsItemType[] = []
     if (category === 'all') {
         eventsInSelectedCategory = events

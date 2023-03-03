@@ -1,7 +1,6 @@
 import React from 'react';
 import {EventsItemType} from "../../redux/eventsReducer";
 import {CategoryItemType} from "../../redux/categoryReducer";
-import {useAppSelector} from "../../hook/hook";
 import {EventRow} from "./eventRow/eventRow";
 
 type TableOfEventsPropsTypes = {

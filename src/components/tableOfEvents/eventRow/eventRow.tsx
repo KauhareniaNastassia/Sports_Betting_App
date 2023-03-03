@@ -1,5 +1,5 @@
 import React from 'react';
-import {EventsItemType, RateType} from "../../../redux/eventsReducer";
+import {RateType} from "../../../redux/eventsReducer";
 import {useAppSelector} from "../../../hook/hook";
 import css from './eventRow.module.scss'
 import {NavLink} from "react-router-dom";
