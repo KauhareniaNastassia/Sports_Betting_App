@@ -1,0 +1,24 @@
+
+.wrapper_category_menu {
+  display: inline;
+  background-color: #F9D423;
+
+  .wrapper_category_title {
+    display: flex;
+    flex-direction: column;
+
+    .categoryItem__icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .wrapper_categoryList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+  }
+}
+

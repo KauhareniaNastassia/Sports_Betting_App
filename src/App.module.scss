@@ -1,0 +1,16 @@
+.app {
+  text-align: center;
+  background-color: #c0bfbf;
+  width: 100vw;
+  min-height: 100vh;
+
+  .wrapper__content{
+    width: 80vw;
+    display:flex;
+    margin:0 auto;
+    flex-direction:column;
+    align-self: center;
+  }
+}
+
+
