@@ -10,29 +10,34 @@ import cycling from '../assets/img/cycling.svg'
 import {EventsItemType} from "./eventsReducer";
 
 const initialState: InitialEventStateType = {
-    eventId: 0,
-    category: '',
-    live: false,
-    date: '',
-    host: '',
-    guest: '',
-    betsCount: 0,
-    rate: {
-        winOfHost: 0,
-        winOfGuest: 0,
-        draw: 0,
+    successMessage: ''
+}
+
+
+export const eventReducer = (state: InitialEventStateType = initialState, action: eventActionType): InitialEventStateType => {
+    switch (action.type) {
+        case 'event/SET-SUCCESS-MESSAGE':
+            return {...state, successMessage: action.successMessage}
+
+        default:
+            return state
     }
 }
 
+//actions
 
- const eventReducer = (state: InitialEventStateType = initialState): InitialEventStateType => {
-    return state
-}
-
+export const setAppSuccessMessageAC = (successMessage: string | null) => ({
+    type: 'event/SET-SUCCESS-MESSAGE',
+    successMessage
+} as const)
 
 //  types
 
-type InitialEventStateType = EventsItemType
+export type eventActionType = ReturnType<typeof setAppSuccessMessageAC>
+
+type InitialEventStateType = {
+    successMessage: string | null
+}
 
 
 

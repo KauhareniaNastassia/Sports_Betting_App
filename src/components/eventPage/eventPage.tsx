@@ -1,6 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useParams} from "react-router-dom";
 import {useAppSelector} from "../../hook/hook";
+import {PlaceBetForm} from "./placeBetForm/placeBetForm";
+
 
 
 export const EventPage = () => {
@@ -51,12 +53,9 @@ export const EventPage = () => {
                     </span>
                     </div>
 
-                <div>
 
-                    <input type='radio'/>
+                <PlaceBetForm host={exactEvent.host} guest={exactEvent.guest}/>
 
-                    <button>Place Bet</button>
-                </div>
 
 
                 </div>

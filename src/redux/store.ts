@@ -1,16 +1,15 @@
-import {combineReducers, compose, createStore} from 'redux';
+import {combineReducers, createStore} from 'redux';
 import {categoryReducer} from "./categoryReducer";
 
 import {eventsReducer} from "./eventsReducer";
-
-
+import {eventActionType, eventReducer} from "./eventReducer";
 
 
 const RootReducer = combineReducers({
 
     categories: categoryReducer,
     events: eventsReducer,
-    //event: eventReducer
+    event: eventReducer
 
 
 
@@ -25,12 +24,8 @@ export const store = createStore(RootReducer)
 export type AppRootStateType = ReturnType<typeof store.getState>
 
 
-/*export type ActionsType =
-    | BookListActionTypes
-    | BookActionsType
-    | CategoriesListActionTypes
-    | AuthActionsType
-    | AppActionsType*/
+export type ActionsType =
+    eventActionType
 
 
 /*export type AppDispatchType = ThunkDispatch<AppRootStateType, unknown, ActionsType>
