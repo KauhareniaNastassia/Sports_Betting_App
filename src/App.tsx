@@ -15,7 +15,6 @@ function App() {
             <Header/>
             <Slider/>
 
-            <Notification/>
             <div className={css.wrapper__content}>
                     <Routes>
                         <Route element={<LayoutMainContent/>}>

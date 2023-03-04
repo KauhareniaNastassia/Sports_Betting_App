@@ -30,10 +30,11 @@ export const Notification: React.FC = () => {
         <div className={css.wrapper__notification}>
             {successMessage ?
 
-                <div>
+                <div className={css.notification_block}>
+
                     {successMessage}
 
-                    <button type='button' onClick={onClickCloseNotification} className={css.error_button}>
+                    <button type='button' onClick={onClickCloseNotification} className={css.notification_button}>
                         <img src={closeErrorIcon} alt='close-error'/>
                     </button>
                 </div>
