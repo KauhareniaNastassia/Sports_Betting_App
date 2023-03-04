@@ -1,16 +1,45 @@
-
+@import '../../common/styles/mixins/mixins';
+@import '../../common/styles/variables/variables';
 
 .wrapper_homePage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &::before {
+    content: '';
+    align-items: center;
+    display: block;
+    margin-top: 5px;
+    height: 1px;
+    width: 100%;
+    background-color: $main-text-color;
+  }
 
   .wrapper__buttons {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    justify-content: end;
 
-    .filterBtn {
+    .filterBar__button {
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid #d5d5d5;
+      @include text(16px, 20px, 600, $main-text-color);
 
+      &:hover {
+        background-color: $active-color;
+        border: 1px solid $active-color;
+        color: white;
+        transition: .3s ease-out all;
+      }
     }
+
     .activeBtn {
-      background-color: #F9D423;
+      background-color: $active-color;
+      border: 1px solid $active-color;
+      color: white;
     }
 
   }

@@ -25,6 +25,7 @@
   &:hover {
     .categoryItem__icon {
       filter: none;
+      transition: .3s ease-out all;
     }
 
     .categoryItem__name {

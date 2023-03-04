@@ -1,9 +1,66 @@
-
+@import '../../../common/styles/mixins/mixins';
+@import '../../../common/styles/variables/variables';
 
 .eventRow__wrapper {
+  display: table-row;
+  padding: 20px 0;
 
-  .eventRow_icon {
-    width: 20px;
-    height: 20px;
+  &::after {
+    content: '';
+    align-items: center;
+    display: block;
+    margin-top: 5px;
+    height: 1px;
+    width: 100%;
+    background-color: $main-text-color;
+  }
+
+  .eventRow_icon_wrapper {
+    width: 50px;
+    height: 50px;
+
+    .eventRow_icon {
+      width: 25px;
+      padding-top: 5px
+    }
+
+    .eventRow_icon_live {
+      filter: invert(41%) sepia(89%) saturate(2424%) hue-rotate(341deg) brightness(99%) contrast(103%);
+    }
+  }
+
+  .eventRow_time {
+    @include text(16px, 18px, 500, $main-text-color);
+    width: 70px;
+  }
+
+  .eventRow_time_live {
+    color: $active-color;
+  }
+
+  .players_wrapper {
+    display: flex;
+    justify-content: start;
+    width: 700px;
+
+    .eventRow_players_link {
+      padding-top: 15px;
+      display: flex;
+      align-content: center;
+      text-decoration: none;
+      @include text(16px, 18px, 500, $main-text-color);
+    }
+  }
+
+  .winOfHost_wrapper,
+  .draw_wrapper,
+  .winOfGuest_wrapper {
+    width: 50px;
+    @include text(16px, 18px, 400, $main-text-color);
+  }
+
+  .totalBets_wrapper {
+    padding-left: 50px;
+    @include text(16px, 18px, 500, $active-color);
   }
 }

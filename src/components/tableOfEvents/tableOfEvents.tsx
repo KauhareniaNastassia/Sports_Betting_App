@@ -2,6 +2,7 @@ import React from 'react';
 import {EventsItemType} from "../../redux/eventsReducer";
 import {CategoryItemType} from "../../redux/categoryReducer";
 import {EventRow} from "./eventRow/eventRow";
+import css from './tableOfEvents.module.scss'
 
 type TableOfEventsPropsTypes = {
     events: EventsItemType[]
@@ -10,16 +11,16 @@ type TableOfEventsPropsTypes = {
 
 export const TableOfEvents: React.FC<TableOfEventsPropsTypes> = ({events, category}) => {
     return (
-        <table>
-            <thead>
+        <table className={css.wrapper__table}>
+            <thead className={css.tableHead}>
             <tr>
-                <th>icon</th>
-                <th>{/*live or soon*/}</th>
-                <th>Players</th>
+                <th></th>
+                <th></th>
+                <th className={css.tableHead__players}>Players</th>
                 <th>1</th>
                 <th>X</th>
                 <th>2</th>
-                <th>Total bets</th>
+                <th className={css.tableHead__totalBets}>Total bets</th>
             </tr>
             </thead>
 
@@ -33,13 +34,9 @@ export const TableOfEvents: React.FC<TableOfEventsPropsTypes> = ({events, catego
                                              rate={event.rate}
                                              date={event.date}
                                              betsCount={event.betsCount}
-
                 />
-
             )}
             </tbody>
-
-
         </table>
     );
 };

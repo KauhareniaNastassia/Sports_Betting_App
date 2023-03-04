@@ -1,0 +1,54 @@
+@import '../../common/styles/mixins/mixins';
+@import '../../common/styles/variables/variables';
+
+.wrapper__table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0 2px;
+
+  tr {
+    border-spacing: 0 10px;
+    line-height: 30px;
+  }
+
+  tr:nth-child(even) {
+    background: #cecece;
+
+    &:hover {
+      background: #F9D423;
+      transition: .3s ease-out all;
+    }
+  }
+
+  tr:nth-child(odd) {
+    background: #f2f5fa;
+    &:hover {
+      background: #F9D423;
+      transition: .3s ease-out all;
+    }
+  }
+
+  .tableHead {
+
+    tr {
+      @include text(18px, 20px, 500, $main-text-color);
+      background-color: transparent;
+      line-height: 50px;
+
+      &:hover {
+        background: transparent;
+        pointer: none
+      }
+    }
+
+    .tableHead__players {
+      display: flex;
+      justify-content: start;
+    }
+
+    .tableHead__totalBets {
+      display: flex;
+      justify-content: end;
+    }
+  }
+}

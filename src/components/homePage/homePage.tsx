@@ -7,9 +7,7 @@ import {useParams} from "react-router-dom";
 
 export const HomePage: React.FC = () => {
     const {category} = useParams()
-
     const events = useAppSelector((state) => state.events.events)
-
     const liveEvents = events.filter(event => event.live)
     const soonEvents = events.filter(event => !event.live)
     const [eventsForTable, setEventsForTable] = useState<EventsItemType[]>(liveEvents)
@@ -38,37 +36,6 @@ export const HomePage: React.FC = () => {
         eventsInSelectedCategory = eventsInThisCategory
     }
 
-
-    /*const {category} = useParams()
-
-    const events = useAppSelector((state) => state.events.events)
-
-    const selectedCategory = useAppSelector(state => state.categories.items.find(el => el.name === category))
-
-    const eventsInThisCategory = events.filter((event) => event.category === selectedCategory?.name)
-    let eventsInSelectedCategory: EventsItemType[] = []
-    if (category === 'all') {
-        eventsInSelectedCategory = events
-    } else {
-        eventsInSelectedCategory = eventsInThisCategory
-    }*/
-
-
-
-    /*const liveEvents = eventsInSelectedCategory.filter(event => event.live)
-    const soonEvents = eventsInSelectedCategory.filter(event => !event.live)
-    const [eventsForTable, setEventsForTable] = useState<EventsItemType[]>(liveEvents)
-
-    const [buttonIsActive, setButtonIsActive] = useState(true)
-
-    const onClickLiveHandler = () => {
-        setEventsForTable(liveEvents)
-    }
-
-    const onClickSoonHandler = () => {
-        setEventsForTable(soonEvents)
-    }
-*/
     return (
         <div className={css.wrapper_homePage}>
 
@@ -77,23 +44,19 @@ export const HomePage: React.FC = () => {
                     type='button'
                     value='Live'
                     onClick={onClickLiveHandler}
-
                     className={buttonLiveIsActive ? `${css.filterBar__button} ${css.activeBtn}` : css.filterBar__button}
-
                 >Live
                 </button>
                 <button
                     type='button'
                     value='Soon'
-                     /*onClick={onClickSoonHandler}*/
                     className={buttonSoonIsActive ? `${css.filterBar__button} ${css.activeBtn}` : css.filterBar__button}
                     onClick={onClickSoonHandler}
                 >Soon
                 </button>
             </div>
 
-            <TableOfEvents events={eventsInSelectedCategory}
-                           />
+            <TableOfEvents events={eventsInSelectedCategory}/>
 
         </div>
     );
