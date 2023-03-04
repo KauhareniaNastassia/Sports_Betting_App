@@ -57,7 +57,6 @@ export const EventPage = () => {
                 <PlaceBetForm host={exactEvent.host} guest={exactEvent.guest}/>
 
 
-
                 </div>
 
             }
