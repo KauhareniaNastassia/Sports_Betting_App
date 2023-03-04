@@ -1,0 +1,53 @@
+@import '../../common/styles/mixins/mixins';
+@import '../../common/styles/variables/variables';
+
+.eventPage_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .eventPage_title_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .eventPage_title {
+      @include text(34px, 22px, 800, $main-text-color)
+    }
+
+    .eventInfo_date {
+      background-color: #F9D423;
+      width: 150px;
+      @include text(18px, 22px, 500, $main-text-color)
+    }
+  }
+
+  .eventInfo_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+
+    .eventInfo_bet_wrapper {
+      background-color: #d7d7d7;
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      border-radius: 10px;
+      width: 200px;
+      padding: 10px;
+      @include text(18px, 22px, 400, $main-text-color);
+
+      .eventInfo_bet_rate {
+        font-weight: 700;
+      }
+
+      &:hover {
+        background-color: #64b000;
+        color: white;
+        transition: .5s ease-out all;
+      }
+    }
+  }
+}

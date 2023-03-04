@@ -1,0 +1,79 @@
+@import '../../../common/styles/mixins/mixins';
+@import '../../../common/styles/variables/variables';
+
+
+.placeBetForm_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  padding: 0 10px;
+
+  .placeBetForm_input_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    @include text(16px, 22px, 400, $main-text-color);
+
+
+    input[type=radio] {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      gap: 10px;
+
+      .placeBetForm_input_radio {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: .2rem solid #AFAEAE;
+      }
+    }
+
+    input[type=radio]:checked ~ label {
+      color: #64b000;
+      font-weight: 600;
+
+      .placeBetForm_input_radio {
+        background-color: #64b000;
+        border-color: #64b000;
+      }
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    input[type=radio]:hover ~ label {
+      color: #64b000;
+      transition: .3s ease-out all;
+
+      .placeBetForm_input_radio {
+        border-color: #64b000;
+      }
+    }
+  }
+
+  .placeBetForm_button {
+    width: 100%;
+    @include text(24px, 22px, 400, #ffffff);
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+    background-color: #64b000;
+
+    &:disabled {
+      background-color: #dad9d9;
+      color: #AFAEAE
+    }
+
+    &:hover {
+      transition: .3s ease-out all;
+      background-color: #5a9d01;
+    }
+  }
+}

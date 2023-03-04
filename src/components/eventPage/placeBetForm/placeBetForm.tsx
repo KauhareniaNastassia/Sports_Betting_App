@@ -1,17 +1,18 @@
 import React, {ChangeEvent, useState} from 'react';
-import css from './placeBetForm.module.scss'
-import {useForm} from "react-hook-form";
-import {NavLink, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {setAppSuccessMessageAC} from "../../../redux/eventReducer";
+import css from './placeBetForm.module.scss'
+import {RateType} from "../../../redux/eventsReducer";
 
 type PlaceBetFormPropsType = {
     host: string
     guest: string
+    rate: RateType
 }
 
 
-export const PlaceBetForm:React.FC<PlaceBetFormPropsType> = ({host, guest}) => {
+export const PlaceBetForm: React.FC<PlaceBetFormPropsType> = ({host, guest, rate}) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const [bet, setBet] = useState('');
@@ -27,21 +28,37 @@ export const PlaceBetForm:React.FC<PlaceBetFormPropsType> = ({host, guest}) => {
     }
 
     return (
-        <form>
-            <input type="radio" value="home win" id="hostWin"
-                   onChange={handleChange} name="bet"/>
-            <label htmlFor="hostWin">hostWin</label>
+        <form className={css.placeBetForm_wrapper}>
+            <div className={css.placeBetForm_input_wrapper}>
+                <input type="radio" value="home win" id="hostWin"
+                       onChange={handleChange} name="bet" className={css.placeBetForm_input}/>
+                <label htmlFor="hostWin">
+                    <span className={css.placeBetForm_input_radio}></span>
+                    <span>Home win </span>
+                    <span>{rate.winOfHost}
+                </span></label>
+            </div>
 
-            <input type="radio" value="away win" id="guestWin"
-                   onChange={handleChange} name="bet"/>
-            <label htmlFor="guestWin">guestWin</label>
+            <div className={css.placeBetForm_input_wrapper}>
+                <input type="radio" value="draw" id="draw"
+                       onChange={handleChange} name="bet"/>
+                <label htmlFor="draw">
+                    <span className={css.placeBetForm_input_radio}></span>
+                    <span>Draw</span>
+                    <span>{rate.draw}</span></label>
+            </div>
 
-            <input type="radio" value="draw" id="draw"
-                   onChange={handleChange} name="bet"/>
-            <label htmlFor="draw">draw</label>
+            <div className={css.placeBetForm_input_wrapper}>
+                <input type="radio" value="away win" id="guestWin"
+                       onChange={handleChange} name="bet"/>
+                <label htmlFor="guestWin">
+                    <span className={css.placeBetForm_input_radio}></span>
+                    <span>Away Win</span>
+                    <span>{rate.winOfGuest}</span></label>
+            </div>
 
 
-            <button type='button' disabled={bet === ''} onClick={onClickHandler}>
+            <button type='button' disabled={bet === ''} onClick={onClickHandler} className={css.placeBetForm_button}>
                 Place bet
             </button>
         </form>
