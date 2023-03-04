@@ -2,95 +2,46 @@
 @import '../../common/styles/variables/variables';
 
 
-
 .header {
-
-  margin-bottom: 15px;
   display: flex;
+  justify-content: space-between;
   position: relative;
   align-items: center;
-
-
-  @media (max-width: 768px) {
-    max-width: 640px;
-    position: center;
-    margin-bottom: 22px;
-    /*margin-bottom: 22px;*/
-  }
-
-  @media(max-width: 320px) {
-    max-width: 288px;
-    position: center;
-    margin: 24px 0;
-  }
+  background-color: $main-text-color;
+  padding: 9px 50px;
 
   .header__logo {
-    margin: 9px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
 
     img {
-      width: 165px;
       height: 40px;
     }
 
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-
-  .header__title {
-    /* position: absolute;*/
-    margin-left: 120px;
-    left: 25.68%;
-    right: 55.41%;
-    top: 15.52%;
-    bottom: 15.52%;
-    @include text(32px, 40px, 600, $main-text-color);
-
-    .header__title_burger {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 24px;
-      margin-left: 0px;
-
-      .header__title_burger {
-        display: inline-flex;
-      }
-    }
-
-    @media(max-width: 320px) {
-      @include text(18px, 28px, 700, $main-text-color);
-    }
-
-  }
-
-  .header__user {
-    display: flex;
-    /*position: absolute;*/
-    position: sticky;
-    left: 72.97%;
-    min-width: 300px;
-    justify-content: flex-end;
-
-    @media (max-width: 768px) {
-      display: none;
-    }
-
     span {
-      @include text(14px, 18px, 700, $main-text-color);
-      align-self: center;
-      padding-right: 16px;
+      @include text(20px, 17px, 500, #ffffff);
+      text-decoration: none;
     }
+  }
 
-    img {
-      width: 58px;
-      height: 58px;
-      filter: drop-shadow(0px 2px 4px rgba(191, 196, 201, 0.2)) drop-shadow(0px 3px 4px rgba(191, 196, 201, 0.18)) drop-shadow(0px 1px 5px rgba(191, 196, 201, 0.24));
-      border-radius: 150px;
+  .header_buttonBlock {
+    display: flex;
+    gap: 10px;
+
+    .header_button {
+      padding: 5px 10px;
+      @include text(16px, 17px, 300, #ffffff);
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      border-radius: 7px;
+
+      &:hover,
+      &:active {
+        color: #2a2a2a;
+        background-color: white;
+      }
     }
   }
 }

@@ -4,22 +4,18 @@ import logo from '../../assets/img/logo.svg'
 import {NavLink} from "react-router-dom";
 
 export const Header: React.FC = () => {
-
-
     return (
         <div className={css.header}>
-            <div className={css.header__logo}>
-                <NavLink to='/sports/all'>
+            <NavLink to='/sports/all'>
+                <div className={css.header__logo}>
                     <img src={logo} alt='logo'/>
                     <span>Online Bet</span>
-                </NavLink>
+                </div>
+            </NavLink>
 
-            </div>
-
-
-            <div>
-                <button>Вход</button>
-                <button>Регистрация</button>
+            <div className={css.header_buttonBlock}>
+                <button className={css.header_button}>Вход</button>
+                <button className={css.header_button}>Регистрация</button>
             </div>
         </div>
     );
