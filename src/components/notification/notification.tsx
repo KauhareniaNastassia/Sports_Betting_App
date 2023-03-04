@@ -5,7 +5,7 @@ import {setAppSuccessMessageAC} from "../../redux/eventReducer";
 import css from './notification.module.scss'
 import closeErrorIcon from '../../assets/img/close-error-icon.svg'
 
-export const Notification:React.FC = () => {
+export const Notification: React.FC = () => {
 
     const successMessage = useAppSelector(state => state.event.successMessage)
     const dispatch = useDispatch()
@@ -17,31 +17,28 @@ export const Notification:React.FC = () => {
         dispatch(setAppSuccessMessageAC(null))
     }
 
-    useEffect( () => {
-        const timer = setInterval( () => {
+    useEffect(() => {
+        const timer = setInterval(() => {
             onClickCloseNotification()
         }, 5000)
 
         return () => clearInterval(timer)
-    } )
-
+    })
 
 
     return (
         <div className={css.wrapper__notification}>
-            {successMessage &&
+            {successMessage ?
 
                 <div>
-
                     {successMessage}
 
                     <button type='button' onClick={onClickCloseNotification} className={css.error_button}>
                         <img src={closeErrorIcon} alt='close-error'/>
                     </button>
-
-
                 </div>
 
+                : <div className={css.notification_emptyBlock}/>
             }
 
 

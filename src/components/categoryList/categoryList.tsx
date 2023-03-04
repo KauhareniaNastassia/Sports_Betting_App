@@ -13,10 +13,11 @@ export const CategoryList: React.FC = () => {
         <div className={css.wrapper_category_menu}>
 
             <ul className={css.wrapper_categoryList}>
-                <NavLink to='/sports/all'>
-                    <li className={css.wrapper_category_title}>
+                <NavLink to='/sports/all'
+                         className={({isActive}) => isActive ? css.wrapper_categoryItemActive : css.wrapper_categoryItem}>
+                    <li className={css.wrapper_categoryItem}>
                         <img src={allSportsIcon} alt='categoryIcon' className={css.categoryItem__icon}/>
-                        <span> All spots </span>
+                        <span className={css.categoryItem__name}> All spots </span>
                     </li>
                 </NavLink>
 

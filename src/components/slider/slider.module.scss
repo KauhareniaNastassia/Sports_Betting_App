@@ -2,12 +2,13 @@
 .wrapper {
   width: 100%;
   height: 350px;
-  background-color: lemonchiffon;
+
+  z-index: -1;
 
   .swiper_slide {
     overflow: hidden;
     position: relative;
-    padding-bottom: 58%;
+    padding-bottom: 25%;
 
     .slider_img {
       position: absolute;

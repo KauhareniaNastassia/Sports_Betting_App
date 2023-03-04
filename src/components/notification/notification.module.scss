@@ -1,5 +1,8 @@
 
 
 .wrapper__notification {
-  z-index: 100;
+
+  .notification_emptyBlock {
+    height: 40px;
+  }
 }

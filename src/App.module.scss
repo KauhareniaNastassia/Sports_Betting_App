@@ -4,11 +4,12 @@
   width: 98.85vw;
   min-height: 100vh;
 
-  .wrapper__content{
+  .wrapper__content {
     width: 80vw;
-    display:flex;
-    margin:0 auto;
-    flex-direction:column;
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+    flex-direction: column;
     align-self: center;
   }
 }
