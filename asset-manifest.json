@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Sports_Betting_App/static/css/main.1010de4e.css",
+    "main.js": "/Sports_Betting_App/static/js/main.25b150e9.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Sports_Betting_App/static/js/787.28cb0dcd.chunk.js",
+    "static/media/sport3.png": "/Sports_Betting_App/static/media/sport3.a4d62df6bdc08b562cd2.png",
+    "static/media/sport2.png": "/Sports_Betting_App/static/media/sport2.6c193acad4862f5fa802.png",
+    "static/media/sport1.png": "/Sports_Betting_App/static/media/sport1.99008b1060aecde13cec.png",
+    "static/media/basketball.svg": "/Sports_Betting_App/static/media/basketball.f3178c89c6720cff44051c1c76c42685.svg",
+    "static/media/tennis.svg": "/Sports_Betting_App/static/media/tennis.2e138c200d24709d1e2c9b0e01ce9f00.svg",
+    "static/media/champion.svg": "/Sports_Betting_App/static/media/champion.5336f8675a76390c6785bca1e4e6376d.svg",
+    "static/media/baseball.svg": "/Sports_Betting_App/static/media/baseball.0b69f4e5cb65c2208edb2e8f7b1e2e66.svg",
+    "static/media/cycling.svg": "/Sports_Betting_App/static/media/cycling.4bad7b14540c8704d00ce4bcce33f71e.svg",
+    "static/media/handball.svg": "/Sports_Betting_App/static/media/handball.8574d4569287134cf65536d4e437a666.svg",
+    "static/media/volleyball.svg": "/Sports_Betting_App/static/media/volleyball.0891a8e5c77d47ac7cf5c3efda71bd59.svg",
+    "static/media/football.svg": "/Sports_Betting_App/static/media/football.cdcafdb9b0fd12608f58978541b3dda8.svg",
+    "static/media/logo.svg": "/Sports_Betting_App/static/media/logo.a21ecad899db36e7043c759933f6396f.svg",
+    "static/media/hockey.svg": "/Sports_Betting_App/static/media/hockey.d80d383f0cad050de8ad5f2c6cb5bca4.svg",
+    "index.html": "/Sports_Betting_App/index.html",
+    "static/media/close-error-icon.svg": "/Sports_Betting_App/static/media/close-error-icon.8575e7decb66b89d658dfc5f7e41c08b.svg",
+    "static/media/boxing.svg": "/Sports_Betting_App/static/media/boxing.77051b85fcb957a91cf105fc27b679c3.svg",
+    "main.1010de4e.css.map": "/Sports_Betting_App/static/css/main.1010de4e.css.map",
+    "main.25b150e9.js.map": "/Sports_Betting_App/static/js/main.25b150e9.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Sports_Betting_App/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1010de4e.css",
+    "static/js/main.25b150e9.js"
+  ]
+}
