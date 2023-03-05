@@ -9,6 +9,11 @@
   align-items: start;
   padding: 0 10px;
 
+  @media (max-width: 650px) {
+    grid-area: placeBet;
+    align-items: center;
+  }
+
   .placeBetForm_input_wrapper {
     display: flex;
     flex-direction: row;
@@ -16,6 +21,13 @@
     justify-content: space-around;
     gap: 10px;
     @include text(16px, 22px, 400, $main-text-color);
+
+    @media (max-width: 850px) {
+      @include text(15px, 18px, 400, $main-text-color);
+    }
+    @media (max-width: 850px) {
+      @include text(14px, 20px, 400, $main-text-color);
+    }
 
 
     input[type=radio] {
@@ -31,16 +43,25 @@
         height: 15px;
         border-radius: 50%;
         border: .2rem solid #AFAEAE;
+
+        @media (max-width: 850px) {
+          width: 13px;
+          height: 13px;
+        }
+        @media (max-width: 850px) {
+          width: 10px;
+          height: 10px;
+        }
       }
     }
 
     input[type=radio]:checked ~ label {
-      color: #64b000;
+      color: $green-color;
       font-weight: 600;
 
       .placeBetForm_input_radio {
-        background-color: #64b000;
-        border-color: #64b000;
+        background-color: $green-color;
+        border-color: $green-color;
       }
 
       span {
@@ -49,31 +70,46 @@
     }
 
     input[type=radio]:hover ~ label {
-      color: #64b000;
+      color: $green-color;
       transition: .3s ease-out all;
 
       .placeBetForm_input_radio {
-        border-color: #64b000;
+        border-color: $green-color;
       }
     }
   }
 
   .placeBetForm_button {
     width: 100%;
-    @include text(24px, 22px, 400, #ffffff);
+    @include text(24px, 22px, 400, $white-color);
     border-radius: 10px;
     border: none;
     padding: 10px 30px;
-    background-color: #64b000;
+    background-color: $green-color;
+
+    @media (max-width: 1000px) {
+      @include text(22px, 22px, 400, $white-color);
+      padding: 7px 25px;
+    }
+    @media (max-width: 850px) {
+      @include text(20px, 20px, 400, $white-color);
+    }
+    @media (max-width: 850px) {
+      @include text(18px, 20px, 400, $white-color);
+    }
+    @media (max-width: 400px) {
+      @include text(18px, 20px, 400, $white-color);
+      width: 180px;
+    }
 
     &:disabled {
       background-color: #dad9d9;
-      color: #AFAEAE
+      color: #AFAEAE;
     }
 
-    &:hover {
+    &:hover:enabled {
       transition: .3s ease-out all;
-      background-color: #5a9d01;
+      background-color: $green-color-for-border;
     }
   }
 }

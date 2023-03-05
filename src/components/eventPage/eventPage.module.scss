@@ -12,13 +12,27 @@
     align-items: center;
 
     .eventPage_title {
-      @include text(34px, 22px, 800, $main-text-color)
+      @include text(34px, 22px, 800, $main-text-color);
+
+      @media (max-width: 850px) {
+        @include text(30px, 22px, 700, $main-text-color);
+      }
+      @media (max-width: 650px) {
+        @include text(26px, 22px, 700, $main-text-color);
+      }
     }
 
     .eventInfo_date {
       background-color: #F9D423;
       width: 150px;
-      @include text(18px, 22px, 500, $main-text-color)
+      @include text(18px, 22px, 500, $main-text-color);
+
+      @media (max-width: 850px) {
+        @include text(16px, 18px, 500, $main-text-color);
+      }
+      @media (max-width: 650px) {
+        @include text(14px, 18px, 500, $main-text-color);
+      }
     }
   }
 
@@ -28,6 +42,33 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
+
+    @media (max-width: 650px) {
+      right: 50%;
+      display: grid;
+      grid-template-areas:
+    'betWrapper placeBet'
+    'betWrapper   placeBet'
+    'betWrapper placeBet';
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 3fr;
+
+      #hostWin {
+        grid-area: betWrapper;
+      }
+      #draw {
+        grid-area: betWrapper;
+      }
+      #guestWin {
+        grid-area: betWrapper;
+      }
+    }
+    @media (max-width: 400px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
 
     .eventInfo_bet_wrapper {
       background-color: #d7d7d7;
@@ -39,8 +80,45 @@
       padding: 10px;
       @include text(18px, 22px, 400, $main-text-color);
 
+      @media (max-width: 1000px) {
+        padding: 7px;
+        @include text(18px, 22px, 400, $main-text-color);
+      }
+      @media (max-width: 950px) {
+        padding: 5px;
+        @include text(17px, 20px, 400, $main-text-color);
+        width: 180px;
+      }
+      @media (max-width: 850px) {
+        width: 160px;
+        @include text(16px, 18px, 400, $main-text-color);
+      }
+      @media (max-width: 750px) {
+        width: 140px;
+        @include text(16px, 18px, 400, $main-text-color);
+      }
+      @media (max-width: 650px) {
+        width: 200px;
+      }
+      @media (max-width: 500px) {
+        width: 180px;
+      }
+      @media (max-width: 450px) {
+        @include text(14px, 16px, 400, $main-text-color);
+        width: 160px;
+      }
+      @media (max-width: 400px) {
+        margin-bottom: 10px;
+        width: 180px;
+      }
+
+
       .eventInfo_bet_rate {
         font-weight: 700;
+
+        @media (max-width: 650px) {
+          font-weight: 600;
+        }
       }
 
       &:hover {

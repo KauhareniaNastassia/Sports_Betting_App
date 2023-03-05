@@ -1,12 +1,12 @@
 import React from 'react';
 import css from './App.module.scss'
-import {Header} from "./components/header/Header";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {HomePage} from "./components/homePage/homePage";
 import {EventPage} from "./components/eventPage/eventPage";
 import {Slider} from "./components/slider/slider";
 import {LayoutMainContent} from "./components/layoutMainContent/layoutMainContent";
 import {Footer} from "./components/footer/footer";
+import {Header} from "./components/header/header";
 
 
 function App() {
@@ -16,7 +16,6 @@ function App() {
             <div className={css.app_height}>
                 <Header/>
                 <Slider/>
-
 
                 <div className={css.wrapper__content}>
                     <Routes>
@@ -28,7 +27,6 @@ function App() {
                         <Route path="/sports/:category/:eventId" element={<EventPage/>}/>
                     </Routes>
                 </div>
-
             </div>
 
             <Footer/>

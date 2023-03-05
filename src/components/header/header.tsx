@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Header.module.scss'
+import css from './header.module.scss'
 import logo from '../../assets/img/logo.svg'
 import {NavLink} from "react-router-dom";
 import {BurgerMenu} from "../burgerMenu/burger-menu";

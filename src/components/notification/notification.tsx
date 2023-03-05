@@ -20,7 +20,7 @@ export const Notification: React.FC = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             onClickCloseNotification()
-        }, 500000)
+        }, 5000)
 
         return () => clearInterval(timer)
     })
@@ -31,19 +31,14 @@ export const Notification: React.FC = () => {
             {successMessage ?
 
                 <div className={css.notification_block}>
-
                     {successMessage}
-
                     <button type='button' onClick={onClickCloseNotification} className={css.notification_button}>
                         <img src={closeErrorIcon} alt='close-error'/>
-
                     </button>
                 </div>
 
                 : <div className={css.notification_emptyBlock}/>
             }
-
-
         </div>
     );
 };
