@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './categoryItem.module.scss'
+import css from '../categoryList.module.scss'
 import {NavLink} from "react-router-dom";
 
 type CategoryItemPropsType = {

@@ -1,0 +1,115 @@
+@import '../../common/styles/mixins/mixins';
+@import '../../common/styles/variables/variables';
+
+
+.burger_wrapper {
+  position: relative;
+
+  .menu__btn {
+    width: 32px;
+    height: 32px;
+    padding: 6.67px 2.67px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 320px) {
+      width: 24px;
+      height: 24px;
+    }
+
+    .menu__btn_span {
+      width: 26.67px;
+      height: 2.67px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      transition: all 0.5s;
+      border-radius: 10px;
+
+      @media (max-width: 320px) {
+        width: 20px;
+        height: 2px;
+      }
+    }
+  }
+
+  .menu_close {
+    .menu__btn_span:nth-of-type(2) {
+      top: calc(50% - 8px);
+
+      @media (max-width: 320px) {
+        top: calc(50% - 5.5px);
+      }
+    }
+
+    .menu__btn_span:nth-of-type(3) {
+      top: calc(50% + 8px);
+
+      @media (max-width: 320px) {
+        top: calc(50% + 5.7px);
+      }
+    }
+  }
+
+  .menu_open {
+    .menu__btn_span:nth-of-type(1) {
+      display: none;
+
+    }
+
+    .menu__btn_span:nth-of-type(2) {
+      background-color: $active-color;
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(45deg);
+    }
+
+    .menu__btn_span:nth-of-type(3) {
+      background-color: $active-color;
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(-45deg);
+    }
+  }
+
+  .burger_popUp {
+    position: absolute;
+    background-color: #2a2a2a;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .burger_popUp_button {
+      margin: 5px 10px;
+      height: 20px;
+      @include text(16px, 18px, 500, #ffffff);
+      align-items: start;
+      background-color: transparent;
+      border: none;
+
+      @media (max-width: 650px) {
+        @include text(14px, 16px, 400, #ffffff);
+      }
+
+      &:hover,
+      &:active{
+        border-bottom: 1px solid #ffffff;
+        transition: .4s ease-in-out all;
+
+
+      }
+    }
+  }
+
+}
+
+
+

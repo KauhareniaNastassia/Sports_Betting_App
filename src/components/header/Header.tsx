@@ -2,6 +2,7 @@ import React from 'react';
 import css from './Header.module.scss'
 import logo from '../../assets/img/logo.svg'
 import {NavLink} from "react-router-dom";
+import {BurgerMenu} from "../burgerMenu/burger-menu";
 
 export const Header: React.FC = () => {
     return (
@@ -16,6 +17,10 @@ export const Header: React.FC = () => {
             <div className={css.header_buttonBlock}>
                 <button className={css.header_button}>Вход</button>
                 <button className={css.header_button}>Регистрация</button>
+            </div>
+
+            <div className={css.header__title_burger}>
+                <BurgerMenu/>
             </div>
         </div>
     );

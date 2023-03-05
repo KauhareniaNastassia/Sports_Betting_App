@@ -20,7 +20,7 @@ export const Notification: React.FC = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             onClickCloseNotification()
-        }, 5000)
+        }, 500000)
 
         return () => clearInterval(timer)
     })
@@ -36,6 +36,7 @@ export const Notification: React.FC = () => {
 
                     <button type='button' onClick={onClickCloseNotification} className={css.notification_button}>
                         <img src={closeErrorIcon} alt='close-error'/>
+
                     </button>
                 </div>
 

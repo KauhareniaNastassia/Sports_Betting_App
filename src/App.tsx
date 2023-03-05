@@ -6,16 +6,19 @@ import {HomePage} from "./components/homePage/homePage";
 import {EventPage} from "./components/eventPage/eventPage";
 import {Slider} from "./components/slider/slider";
 import {LayoutMainContent} from "./components/layoutMainContent/layoutMainContent";
-import {Notification} from "./components/notification/notification";
+import {Footer} from "./components/footer/footer";
 
 
 function App() {
     return (
         <div className={css.app}>
-            <Header/>
-            <Slider/>
 
-            <div className={css.wrapper__content}>
+            <div className={css.app_height}>
+                <Header/>
+                <Slider/>
+
+
+                <div className={css.wrapper__content}>
                     <Routes>
                         <Route element={<LayoutMainContent/>}>
                             <Route path="/" element={<Navigate to="/sports/all"/>}/>
@@ -24,7 +27,11 @@ function App() {
 
                         <Route path="/sports/:category/:eventId" element={<EventPage/>}/>
                     </Routes>
+                </div>
+
             </div>
+
+            <Footer/>
         </div>
     );
 }

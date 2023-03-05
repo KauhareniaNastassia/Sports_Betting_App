@@ -1,16 +1,43 @@
 .app {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background-color: #edeff4;
-  width: 98.85vw;
-  min-height: 100vh;
+  max-width: 100vw;
 
-  .wrapper__content {
-    width: 80vw;
+  .app_height {
+    min-height: calc(100vh - 50px);
     display: flex;
-    margin: 0 auto;
-    gap: 20px;
     flex-direction: column;
-    align-self: center;
+    text-align: center;
+
+    .wrapper__content {
+      width: 80vw;
+      display: flex;
+      margin: 0 auto;
+      gap: 20px;
+      flex-direction: column;
+      align-self: center;
+
+      @media (max-width: 1217px) {
+        width: 85vw;
+      }
+
+      @media (max-width: 1147px) {
+        width: 90vw;
+      }
+
+      @media (max-width: 1081px) {
+        width: 95vw;
+      }
+
+      @media (max-width: 1081px) {
+        width: 95vw;
+      }
+
+    }
+
+
   }
 }
 
