@@ -29,7 +29,7 @@
     .filterBar__button {
       padding: 6px 14px;
       border-radius: 8px;
-      border: 1px solid #d5d5d5;
+      border: 1px solid $unActive-button-border;
       @include text(16px, 20px, 600, $main-text-color);
 
       @media (max-width: 1000px) {

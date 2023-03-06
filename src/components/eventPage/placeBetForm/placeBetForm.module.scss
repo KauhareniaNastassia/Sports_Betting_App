@@ -29,7 +29,6 @@
       @include text(14px, 20px, 400, $main-text-color);
     }
 
-
     input[type=radio] {
       display: none;
     }
@@ -98,13 +97,12 @@
       @include text(18px, 20px, 400, $white-color);
     }
     @media (max-width: 400px) {
-      @include text(18px, 20px, 400, $white-color);
       width: 180px;
     }
 
     &:disabled {
-      background-color: #dad9d9;
-      color: #AFAEAE;
+      background-color: $background-disable-button;
+      color: $text-color-disable-button;
     }
 
     &:hover:enabled {

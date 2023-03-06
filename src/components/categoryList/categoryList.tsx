@@ -21,14 +21,11 @@ export const CategoryList: React.FC = () => {
                     </li>
                 </NavLink>
 
-
                 {categories.map((category) => <CategoryItem key={category.id}
                                                             id={category.id}
                                                             name={category.name}
                                                             icon={category.icon}/>
                 )}
-
-
             </ul>
 
         </div>

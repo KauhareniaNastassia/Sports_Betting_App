@@ -11,12 +11,10 @@ type EventRowPropsType = {
     host: string
     guest: string
     rate: RateType
-    date: string
     betsCount: number
 }
 
 export const EventRow: React.FC<EventRowPropsType> = ({
-                                                          date,
                                                           eventId,
                                                           rate,
                                                           host,

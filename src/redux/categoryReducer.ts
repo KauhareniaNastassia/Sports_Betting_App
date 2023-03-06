@@ -55,7 +55,6 @@ const initialState: InitialCategoryStateType = {
             name: 'Cycling',
             icon: cycling
         },
-
     ] as CategoryItemType[]
 }
 
@@ -66,7 +65,6 @@ export const categoryReducer = (state: InitialCategoryStateType = initialState):
 
 
 //  types
-
 type InitialCategoryStateType = {
     items: CategoryItemType[]
 }

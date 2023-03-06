@@ -6,10 +6,8 @@ import css from './notification.module.scss'
 import closeErrorIcon from '../../assets/img/close-error-icon.svg'
 
 export const Notification: React.FC = () => {
-
     const successMessage = useAppSelector(state => state.event.successMessage)
     const dispatch = useDispatch()
-
     const [isNotificationShown, setIsNotificationShow] = useState(false)
 
     const onClickCloseNotification = () => {
@@ -20,22 +18,16 @@ export const Notification: React.FC = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             onClickCloseNotification()
-        }, 5000000)
-
+        }, 5000)
         return () => clearInterval(timer)
     })
 
-
     return (
-     /*   <div className={css.wrapper__notification}>*/
-
-                <div className={css.notification_block}>
-                    {successMessage}
-                    <button type='button' onClick={onClickCloseNotification} className={css.notification_button}>
-                        <img src={closeErrorIcon} alt='close-error'/>
-                    </button>
-                </div>
-
-       /* </div>*/
+        <div className={css.notification_block}>
+            {successMessage}
+            <button type='button' onClick={onClickCloseNotification} className={css.notification_button}>
+                <img src={closeErrorIcon} alt='close-error'/>
+            </button>
+        </div>
     );
 };

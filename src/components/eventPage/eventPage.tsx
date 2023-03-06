@@ -14,15 +14,18 @@ export const EventPage: React.FC = () => {
     const navigate = useNavigate()
 
     let date = moment(exactEvent?.date).format("MMMM Do YYYY, h:mm:ss a")
+    const onClickBackToHomePageHandler = () => {
+        navigate('/sports/all')
+    }
 
     return (
         <div className={css.wrapper}>
 
-            <button className={css.backButton} onClick={() => {navigate('/sports/all')}}>
+            <button className={css.backButton} onClick={onClickBackToHomePageHandler}>
                 <img src={arrowBack} className={css.backButton_arrow} alt='arrow back'/>Back
             </button>
-            {exactEvent &&
 
+            {exactEvent &&
                 <div className={css.eventPage_wrapper}>
 
                     <div className={css.eventPage_title_wrapper}>
@@ -46,7 +49,7 @@ export const EventPage: React.FC = () => {
                             <span>
                                 Draw
                             </span>
-                            <span  className={css.eventInfo_bet_rate}>
+                            <span className={css.eventInfo_bet_rate}>
                                 {exactEvent.rate.draw}
                             </span>
                         </div>
@@ -55,7 +58,7 @@ export const EventPage: React.FC = () => {
                             <span>
                                 {exactEvent.guest}
                             </span>
-                            <span  className={css.eventInfo_bet_rate}>
+                            <span className={css.eventInfo_bet_rate}>
                                 {exactEvent.rate.winOfGuest}
                             </span>
                         </div>

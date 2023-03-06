@@ -1,15 +1,13 @@
 import React from 'react';
 import {EventsItemType} from "../../redux/eventsReducer";
-import {CategoryItemType} from "../../redux/categoryReducer";
 import {EventRow} from "./eventRow/eventRow";
 import css from './tableOfEvents.module.scss'
 
 type TableOfEventsPropsTypes = {
     events: EventsItemType[]
-    category?: CategoryItemType
 }
 
-export const TableOfEvents: React.FC<TableOfEventsPropsTypes> = ({events, category}) => {
+export const TableOfEvents: React.FC<TableOfEventsPropsTypes> = ({events}) => {
     return (
         <table className={css.wrapper__table}>
             <thead className={css.tableHead}>
@@ -32,7 +30,6 @@ export const TableOfEvents: React.FC<TableOfEventsPropsTypes> = ({events, catego
                                              host={event.host}
                                              guest={event.guest}
                                              rate={event.rate}
-                                             date={event.date}
                                              betsCount={event.betsCount}
                 />
             )}

@@ -13,11 +13,9 @@
   @media (max-width: 1200px) {
     padding: 9px 40px;
   }
-
   @media (max-width: 1100px) {
     padding: 9px 30px;
   }
-
   @media (max-width: 1000px) {
     padding: 9px 20px;
   }
@@ -36,11 +34,11 @@
     }
 
     span {
-      @include text(20px, 17px, 500, #ffffff);
+      @include text(20px, 17px, 500, $white-color);
       text-decoration: none;
 
       @media (max-width: 1000px) {
-        @include text(18px, 20px, 500, #ffffff);
+        @include text(18px, 20px, 500, $white-color);
       }
     }
   }
@@ -55,19 +53,19 @@
 
     .header_button {
       padding: 5px 10px;
-      @include text(16px, 17px, 300, #ffffff);
+      @include text(16px, 17px, 300, $white-color);
       background-color: transparent;
-      border: 1px solid #ffffff;
+      border: 1px solid $white-color;
       border-radius: 7px;
 
       &:hover,
       &:active {
-        color: #2a2a2a;
+        color: $main-text-color;
         background-color: white;
       }
 
       @media (max-width: 1000px) {
-        @include text(14px, 15px, 300, #ffffff);
+        @include text(14px, 15px, 300, $white-color);
       }
     }
   }

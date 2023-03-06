@@ -4,7 +4,7 @@ import sportImg2 from '../../assets/img/sport2.png'
 import sportImg3 from '../../assets/img/sport3.png'
 import css from './slider.module.scss'
 import {Swiper, SwiperSlide} from "swiper/react";
-import {A11y, Autoplay, EffectFade, Navigation, Pagination, Scrollbar} from "swiper";
+import {Autoplay, EffectFade} from "swiper";
 import 'swiper/css'
 import 'swiper/css/bundle'
 import 'swiper/css/navigation';
@@ -20,16 +20,15 @@ export const Slider: React.FC = () => {
     let photos:PhotosType[] = [
         {
             photoId: 1,
-            photo: sportImg1
+            photo: sportImg1,
         },
         {
             photoId: 2,
-            photo: sportImg2
+            photo: sportImg2,
         },
-
         {
             photoId: 3,
-            photo: sportImg3
+            photo: sportImg3,
         },
     ]
 

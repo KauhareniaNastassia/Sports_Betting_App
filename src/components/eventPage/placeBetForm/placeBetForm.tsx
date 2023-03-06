@@ -11,7 +11,6 @@ type PlaceBetFormPropsType = {
     rate: RateType
 }
 
-
 export const PlaceBetForm: React.FC<PlaceBetFormPropsType> = ({host, guest, rate}) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -23,7 +22,6 @@ export const PlaceBetForm: React.FC<PlaceBetFormPropsType> = ({host, guest, rate
 
     const onClickHandler = () => {
         navigate('/sports/all')
-
         dispatch(setAppSuccessMessageAC(`Thank you, your bet in the match ${host} - ${guest} on the ${bet} has been accepted!`))
     }
 
@@ -57,13 +55,10 @@ export const PlaceBetForm: React.FC<PlaceBetFormPropsType> = ({host, guest, rate
                     <span>{rate.winOfGuest}</span></label>
             </div>
 
-
             <button type='button' disabled={bet === ''} onClick={onClickHandler} className={css.placeBetForm_button}>
                 Place bet
             </button>
         </form>
-
-
     );
 }
 

@@ -26,24 +26,9 @@
     padding: 1px;
   }
 
-
   td {
     @media (max-width: 1190px) {
       padding-right: 5px;
-    }
-  }
-
-  &::after {
-    content: '';
-    align-items: center;
-    display: block;
-    margin-top: 5px;
-    height: 1px;
-    width: 100%;
-    background-color: $main-text-color;
-
-    @media (max-width: 600px) {
-      display: none;
     }
   }
 
@@ -89,7 +74,6 @@
     @media (max-width: 530px) {
       width: 35px;
     }
-
   }
 
   .eventRow_time_live {
@@ -100,7 +84,6 @@
     display: flex;
     justify-content: start;
     width: 700px;
-    //background-color: #64b000;
 
     @media (max-width: 1190px) {
       width: 600px;
@@ -113,7 +96,6 @@
     }
     @media (max-width: 600px) {
       grid-area: player;
-
     }
     @media (max-width: 550px) {
       width: 280px;
@@ -133,7 +115,6 @@
     @media (max-width: 310px) {
       width: 130px;
     }
-
 
     .eventRow_players_link {
       padding-top: 15px;
@@ -157,7 +138,6 @@
     }
   }
 
-
   .winOfHost_wrapper,
   .draw_wrapper,
   .winOfGuest_wrapper {
@@ -166,6 +146,9 @@
 
     @media (max-width: 1190px) {
       @include text(14px, 16px, 400, $main-text-color);
+    }
+    @media (max-width: 600px) {
+      padding-top: 15px;
     }
     @media (max-width: 530px) {
       @include text(13px, 14px, 400, $main-text-color);
@@ -179,21 +162,18 @@
   .winOfHost_wrapper {
     @media (max-width: 600px) {
       grid-area: hostWin;
-      padding-top: 15px;
     }
   }
 
   .draw_wrapper {
     @media (max-width: 600px) {
       grid-area: draw;
-      padding-top: 15px;
     }
   }
 
   .winOfGuest_wrapper {
     @media (max-width: 600px) {
       grid-area: guestWin;
-      padding-top: 15px;
     }
   }
 

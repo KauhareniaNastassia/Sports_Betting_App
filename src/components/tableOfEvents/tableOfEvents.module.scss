@@ -12,18 +12,17 @@
   }
 
   tr:nth-child(even) {
-    background: #cecece;
-
+    background: $table-even-lines;
     &:hover {
-      background: #F9D423;
+      background: $table-lines-hover;
       transition: .3s ease-out all;
     }
   }
 
   tr:nth-child(odd) {
-    background: #f2f5fa;
+    background: $table-odd-lines;
     &:hover {
-      background: #F9D423;
+      background: $table-lines-hover;
       transition: .3s ease-out all;
     }
   }

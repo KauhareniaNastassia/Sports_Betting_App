@@ -7,6 +7,7 @@ import {BurgerMenu} from "../burgerMenu/burger-menu";
 export const Header: React.FC = () => {
     return (
         <div className={css.header}>
+
             <NavLink to='/sports/all'>
                 <div className={css.header__logo}>
                     <img src={logo} alt='logo'/>

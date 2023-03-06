@@ -3,11 +3,10 @@ import css from './burger-menu.module.scss'
 import {useOnClickOutsideCloseSideBar} from "../../hook/onClickOutsideCloseSideBar";
 
 
-export const BurgerMenu = () => {
+export const BurgerMenu: React.FC = () => {
 
     const [showMenuBtn, setShowMenuBtn] = useState(false)
     const [popUpClose, setPopUpClose] = useState(true)
-
     const node = useRef<HTMLDivElement>(null);
 
     const onClickOpenMenu = () => {
@@ -21,6 +20,7 @@ export const BurgerMenu = () => {
     }
 
     useOnClickOutsideCloseSideBar(node, closeSideBar);
+
     return (
         <div className={css.burger_wrapper} ref={node}>
 
@@ -41,8 +41,6 @@ export const BurgerMenu = () => {
                     <button className={css.burger_popUp_button}>Registration</button>
                     <button className={css.burger_popUp_button}>Contacts</button>
                 </div>
-
-
             }
         </div>
     )

@@ -448,7 +448,6 @@ const initialState: InitialEventsStateType = {
                 draw: 2.99,
             }
         },
-
     ] as EventsItemType[]
 }
 
