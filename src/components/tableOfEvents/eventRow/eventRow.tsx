@@ -43,7 +43,7 @@ export const EventRow: React.FC<EventRowPropsType> = ({
 
             <td className={css.players_wrapper}>
                 <NavLink className={css.eventRow_players_link} to={`/sports/${category}/${eventId}`}>
-                    <span>{host} -</span>  <span>{guest}</span>
+                    <span>{host}-</span>  <span>{guest}</span>
                 </NavLink>
             </td>
 
