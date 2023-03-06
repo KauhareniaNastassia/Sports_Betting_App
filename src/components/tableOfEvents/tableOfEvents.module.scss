@@ -30,6 +30,10 @@
 
   .tableHead {
 
+    @media (max-width: 600px) {
+      display: none;
+    }
+
     tr {
       @include text(18px, 20px, 500, $main-text-color);
       background-color: transparent;
@@ -53,8 +57,6 @@
     .tableHead__totalBets {
       display: flex;
       justify-content: end;
-
-
     }
   }
 }

@@ -3,12 +3,15 @@ import {useParams} from "react-router-dom";
 import {useAppSelector} from "../../hook/hook";
 import {PlaceBetForm} from "./placeBetForm/placeBetForm";
 import css from './eventPage.module.scss'
+import moment from "moment";
 
 export const EventPage: React.FC = () => {
     let {eventId} = useParams()
     let exactId = Number(eventId)
     const events = useAppSelector(state => state.events.events)
     const exactEvent = events.find(event => event.eventId === exactId)
+
+    let date = moment(exactEvent?.date).format("MMMM Do YYYY, h:mm:ss a")
 
     return (
         <div>
@@ -19,7 +22,7 @@ export const EventPage: React.FC = () => {
                     <div className={css.eventPage_title_wrapper}>
                         <h2 className={css.eventPage_title}>Match Result</h2>
                         <div className={css.eventInfo_date}>
-                            {exactEvent.date} 22.06.2023 18.30
+                            {date}
                         </div>
                     </div>
 

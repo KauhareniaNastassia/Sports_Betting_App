@@ -14,12 +14,12 @@ export const TableOfEvents: React.FC<TableOfEventsPropsTypes> = ({events, catego
         <table className={css.wrapper__table}>
             <thead className={css.tableHead}>
             <tr>
-                <th></th>
-                <th></th>
+                <th className={css.eventRow_icon_wrapper}></th>
+                <th className={ css.eventRow_time}></th>
                 <th className={css.tableHead__players}>Players</th>
-                <th>1</th>
-                <th>X</th>
-                <th>2</th>
+                <th className={css.winOfHost_wrapper}>1</th>
+                <th className={css.draw_wrapper}>X</th>
+                <th className={css.winOfGuest_wrapper}>2</th>
                 <th className={css.tableHead__totalBets}>Total bets</th>
             </tr>
             </thead>

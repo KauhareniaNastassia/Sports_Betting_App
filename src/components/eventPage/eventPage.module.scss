@@ -23,8 +23,7 @@
     }
 
     .eventInfo_date {
-      background-color: #F9D423;
-      width: 150px;
+      width: 250px;
       @include text(18px, 22px, 500, $main-text-color);
 
       @media (max-width: 850px) {

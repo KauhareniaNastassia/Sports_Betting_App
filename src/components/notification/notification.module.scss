@@ -20,8 +20,11 @@
   @media (max-width: 421px) {
     height: 8vh;
   }
-  @media (max-width: 421px) {
-    height: 9vh;
+  @media (max-width: 400px) {
+    height: 10vh;
+  }
+  @media (max-width: 309px) {
+    height: 12vh;
   }
 
   .notification_block  {

@@ -6,6 +6,26 @@
   align-items: stretch;
   padding: 20px 0;
 
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-areas:
+    'liveIcon player hostWin draw guestWin'
+    'liveOrSoon player  hostWin draw guestWin';
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    padding: 0;
+    height: 55px;
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: 0.5fr 4fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  @media (max-width: 530px) {
+    padding: 1px;
+  }
+
+
   td {
     @media (max-width: 1190px) {
       padding-right: 5px;
@@ -20,6 +40,10 @@
     height: 1px;
     width: 100%;
     background-color: $main-text-color;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   .eventRow_icon_wrapper {
@@ -27,9 +51,12 @@
     height: 50px;
 
     @media (max-width: 1190px) {
-
       width: 30px;
       height: 40px;
+    }
+    @media (max-width: 600px) {
+      grid-area: liveIcon;
+      height: 20px;
     }
 
     .eventRow_icon {
@@ -54,8 +81,14 @@
     @media (max-width: 1190px) {
       @include text(14px, 16px, 500, $main-text-color);
       width: 40px;
-
     }
+    @media (max-width: 600px) {
+      grid-area: liveOrSoon;
+    }
+    @media (max-width: 530px) {
+      width: 35px;
+    }
+
   }
 
   .eventRow_time_live {
@@ -66,14 +99,36 @@
     display: flex;
     justify-content: start;
     width: 700px;
-
-    @media (max-width: 1050px) {
-      width: 400px;
-    }
+    //background-color: #64b000;
 
     @media (max-width: 1190px) {
       width: 600px;
     }
+    @media (max-width: 1050px) {
+      width: 400px;
+    }
+    @media (max-width: 800px) {
+      width: 300px;
+    }
+    @media (max-width: 600px) {
+      grid-area: player;
+    }
+    @media (max-width: 550px) {
+      width: 280px;
+    }
+    @media (max-width: 530px) {
+      width: 240px;
+    }
+    @media (max-width: 450px) {
+      width: 200px;
+    }
+    @media (max-width: 380px) {
+      width: 170px;
+    }
+    @media (max-width: 330px) {
+      width: 150px;
+    }
+
 
     .eventRow_players_link {
       padding-top: 15px;
@@ -83,11 +138,20 @@
       @include text(16px, 18px, 500, $main-text-color);
 
       @media (max-width: 1190px) {
-        padding-top: 11px;
+        padding-top: 12px;
         @include text(16px, 18px, 500, $main-text-color);
+      }
+      @media (max-width: 530px) {
+        @include text(14px, 16px, 500, $main-text-color);
+      }
+      @media (max-width: 450px) {
+        flex-direction: column;
+        padding-top:2px;
+        width: 100%;
       }
     }
   }
+
 
   .winOfHost_wrapper,
   .draw_wrapper,
@@ -98,6 +162,34 @@
     @media (max-width: 1190px) {
       @include text(14px, 16px, 400, $main-text-color);
     }
+    @media (max-width: 530px) {
+      @include text(13px, 14px, 400, $main-text-color);
+      width: 40px;
+    }
+    @media (max-width: 430px) {
+      width: 25px;
+    }
+  }
+
+  .winOfHost_wrapper {
+    @media (max-width: 600px) {
+      grid-area: hostWin;
+      padding-top: 15px;
+    }
+  }
+
+  .draw_wrapper {
+    @media (max-width: 600px) {
+      grid-area: draw;
+      padding-top: 15px;
+    }
+  }
+
+  .winOfGuest_wrapper {
+    @media (max-width: 600px) {
+      grid-area: guestWin;
+      padding-top: 15px;
+    }
   }
 
   .totalBets_wrapper {
@@ -107,6 +199,9 @@
     @media (max-width: 1190px) {
       @include text(14px, 16px, 500, $active-color);
       padding-left: 40px;
+    }
+    @media (max-width: 600px) {
+      display: none;
     }
   }
 }
