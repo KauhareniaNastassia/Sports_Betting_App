@@ -20,15 +20,14 @@ export const Notification: React.FC = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             onClickCloseNotification()
-        }, 5000)
+        }, 5000000)
 
         return () => clearInterval(timer)
     })
 
 
     return (
-        <div className={css.wrapper__notification}>
-            {successMessage ?
+     /*   <div className={css.wrapper__notification}>*/
 
                 <div className={css.notification_block}>
                     {successMessage}
@@ -37,8 +36,6 @@ export const Notification: React.FC = () => {
                     </button>
                 </div>
 
-                : <div className={css.notification_emptyBlock}/>
-            }
-        </div>
+       /* </div>*/
     );
 };
