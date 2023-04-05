@@ -35,6 +35,7 @@ export const Slider: React.FC = () => {
 
     return (
         <div className={css.wrapper}>
+
             <Swiper
                 modules={[EffectFade, Autoplay]}
                 slidesPerView={1}
